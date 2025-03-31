@@ -14,3 +14,29 @@ Possible Problems and Solutions:
  * The Display Board is Broken (Issue with setCounts or updateCount): The waiter might have the numbers, but can't write them on the board. Solution: Check the display board (React component) to see if it's working correctly.
  * The Restaurant is Closed (Network Issues): The waiter might not be able to reach the kitchen at all. Solution: Check if the restaurant is open (check network connection).
 In essence, this code is about fetching data from a server (like getting information from a kitchen) and updating the display (the UI) with that data. We need to make sure the waiter has the right instructions and that everything is working smoothly.
+
+NEW ONE 
+
+Let's break down line number 36:
+GET_FEED_CONFIG: `${API_URL}/core/getFeedConfig`,
+
+Understanding the Line
+ * GET_FEED_CONFIG:: This is a key in a JavaScript object named API_URLS. It acts as a label or identifier for the value associated with it.
+ * ${API_URL}/core/getFeedConfig: This is the value assigned to the GET_FEED_CONFIG key. It represents a string that forms a URL.
+   * ${API_URL}: This is a template literal (indicated by the backticks ``). Inside the template literal, ${API_URL} is a placeholder that will be replaced with the actual value of the API_URL variable.  We can assume that API_URL is defined elsewhere in your code (likely near the top of the file or in a configuration file) and holds the base URL of your API.
+   * /core/getFeedConfig: This is a string literal that represents the specific path or endpoint for the getFeedConfig API within your application's core API.
+In Simple Terms:
+Line 36 defines a URL for fetching configuration data related to "feeds" in your application.  It constructs the complete URL by combining the base API URL (stored in API_URL) with the specific endpoint /core/getFeedConfig.
+Why is it Called in the Core Info Page?
+The fact that this API (getFeedConfig) is called in the core info page suggests that the core info page needs to display or use some configuration information related to feeds.
+Possible Scenarios:
+ * Displaying Feed Settings: The core info page might be showing users the current configuration settings for how feeds are processed or displayed in the application.
+ * Initializing Feed Functionality: The core info page might be fetching the feed configuration when it loads to initialize certain feed-related features or components.
+ * Debugging or Admin Tools: The core info page might be used by administrators or developers to view or modify feed configurations for debugging or maintenance purposes.
+Example:
+Let's say API_URL is defined as https://my-api.example.com. Then, line 36 would effectively create the following URL:
+https://my-api.example.com/core/getFeedConfig
+
+This URL would be used by your application (using axios or fetch) to make an HTTP request to the server to retrieve the feed configuration data.
+In summary, line 36 defines the endpoint for fetching feed configuration data, and its presence in the core info page indicates that this page relies on that configuration for its functionality.
+
