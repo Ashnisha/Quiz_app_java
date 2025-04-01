@@ -40,3 +40,65 @@ https://my-api.example.com/core/getFeedConfig
 This URL would be used by your application (using axios or fetch) to make an HTTP request to the server to retrieve the feed configuration data.
 In summary, line 36 defines the endpoint for fetching feed configuration data, and its presence in the core info page indicates that this page relies on that configuration for its functionality.
 
+
+
+new one
+
+// Install dependencies
+// npm create vite@latest react-jest-project --template react
+// cd react-jest-project
+// npm install
+// npm install --save-dev jest @testing-library/react @testing-library/jest-dom @testing-library/user-event
+
+// src/App.jsx
+import Counter from "./Counter.jsx";
+
+function App() {
+  return (
+    <div>
+      <h1>Simple Counter App</h1>
+      <Counter />
+    </div>
+  );
+}
+
+export default App;
+
+// src/Counter.jsx
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
+    </div>
+  );
+}
+
+export default Counter;
+
+// src/Counter.test.jsx
+import { render, screen, fireEvent } from "@testing-library/react";
+import Counter from "./Counter.jsx";
+
+test("Counter increments and decrements correctly", () => {
+  render(<Counter />);
+
+  const incrementButton = screen.getByText("Increment");
+  const decrementButton = screen.getByText("Decrement");
+  const countText = screen.getByText(/Count:/);
+
+  fireEvent.click(incrementButton);
+  expect(countText).toHaveTextContent("Count: 1");
+
+  fireEvent.click(decrementButton);
+  expect(countText).toHaveTextContent("Count: 0");
+});
+
+// Run tests using: npm test
+
+
