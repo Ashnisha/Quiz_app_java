@@ -12,3 +12,6 @@ describe('StepCoreInfo Component', () => {
     expect(text).to.exist;
   });
 });
+
+
+https://urldefense.proofpoint.com/v2/url?u=https-3A__nam10.safelinks.protection.outlook.com_-3Furl-3Dhttps-253A-252F-252Fallegisindia.ramcocloud.com-252Frvw-26data-3D05-257C01-257Cukumarib-2540visa.com-257Cc9d115a096bd4f3c182108dac2ed0a93-257C38305e12e15d4ee888b9c4db1c477d76-257C0-257C0-257C638036620596980121-257CUnknown-257CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0-253D-257C3000-257C-257C-257C-26sdata-3DXx9M-252FP3HWF9-252FJSrINX2rHwMCvTcdbZdwOxHvkZj0ZNs-253D-26reserved-3D0&d=DwMFAg&c=_EdSgJoS8igo01XnekBu_azVXoUPxJkwz9O2AzwhBbE&r=CbJjsk6t2D_sLmVeKTBTYHD9_4cvOTBm_kbMAGHewhs&m=75Sj0ZFcqEPO6gWcrj1KfB-vwRd51g3sGknlm-L6xCOuelEVfjlrgJbH5lH3kIxp&s=7DdvqarT8s9domU1yoeHGy5Xzxp2rRSyLhxz_rLRTLE&e=
